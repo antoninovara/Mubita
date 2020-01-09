@@ -50,9 +50,12 @@ class HelloWorldSkill(MycroftSkill):
     def handle_hello_world_intent(self, message):
         """ Skills can log useful information. These will appear in the CLI and
         the skills.log file."""
-        self.log.info("There are five types of log messages: "
-                      "info, debug, warning, error, and exception.")
-        self.speak_dialog("hello.world")
+        try:
+            subprocess.call("/home/pi/cuadro1.sh", shell=True)
+        finally:
+            self.log.info("There are five types of log messages: "
+                          "info, debug, warning, error, and exception.")
+            self.speak_dialog("hello.world")
 
     def stop(self):
         pass
