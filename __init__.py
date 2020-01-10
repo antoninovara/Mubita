@@ -17,6 +17,7 @@
 
 from adapt.intent import IntentBuilder
 from mycroft import MycroftSkill, intent_handler
+import subprocess
 
 class HelloWorldSkill(MycroftSkill):
     def __init__(self):
