@@ -51,7 +51,7 @@ class HelloWorldSkill(MycroftSkill):
         """ Skills can log useful information. These will appear in the CLI and
         the skills.log file."""
         try:
-            subprocess.call("/home/pi/cuadro1.sh", shell=True)
+            subprocess.call("sh cuadro1.sh", shell=True)
         finally:
             self.log.info("There are five types of log messages: "
                           "info, debug, warning, error, and exception.")
