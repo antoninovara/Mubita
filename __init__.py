@@ -52,7 +52,7 @@ class HelloWorldSkill(MycroftSkill):
         """ Skills can log useful information. These will appear in the CLI and
         the skills.log file."""
         try:
-            subprocess.call("ssh tb2@192.168.0.163 export ROS_PACKAGE_PATH=/opt/ros/kinetic/share/:$ROS_PACKAGE_PATH; python2 /home/pi/mubita/go_to_specific_point_on_map.py", shell=True)
+            subprocess.call("sh /home/pi/ir1.sh", shell=True)
         finally:
             self.log.info("There are five types of log messages: "
                           "info, debug, warning, error, and exception.")
