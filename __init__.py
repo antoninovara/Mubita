@@ -52,11 +52,12 @@ class HelloWorldSkill(MycroftSkill):
         """ Skills can log useful information. These will appear in the CLI and
         the skills.log file."""
         try:
+            self.speak_dialog("hello.world")
             subprocess.call("sh /home/pi/ir1.sh", shell=True)
         finally:
             self.log.info("There are five types of log messages: "
                           "info, debug, warning, error, and exception.")
-            self.speak_dialog("hello.world")
+            # self.speak_dialog("hello.world")
 
     def stop(self):
         pass
