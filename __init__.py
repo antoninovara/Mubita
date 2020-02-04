@@ -41,7 +41,7 @@ class HelloWorldSkill(MycroftSkill):
         the skills.log file."""
         try:
             self.speak_dialog("welcome")
-            subprocess.call("sh /home/pi/ir2.sh", shell=True)
+            subprocess.call("sh /home/pi/ir1.sh", shell=True)
         finally:
             self.log.info("There are five types of log messages: "
                           "info, debug, warning, error, and exception.")
@@ -53,7 +53,7 @@ class HelloWorldSkill(MycroftSkill):
         the skills.log file."""
         try:
             self.speak_dialog("how.are.you")
-            subprocess.call("sh /home/pi/ir3.sh", shell=True)
+            subprocess.call("sh /home/pi/ir1.sh", shell=True)
         finally:
             self.log.info("There are five types of log messages: "
                           "info, debug, warning, error, and exception.")
